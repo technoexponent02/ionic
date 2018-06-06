@@ -1,0 +1,137 @@
+<ion-header no-border>
+    <ion-item no-lines style="background-color: #7C2020; color:#ffffff; height:45px">
+        <ion-icon ios="ios-arrow-round-back" style="font-size: 2.7em;font-weight: bolder; color:#ffffff;" item-start></ion-icon>
+        <div class="bar bar-header bar-light" style="text-align: center;" item-center>
+            <h1 class="title" style="font-weight: 300;" text-center>Profile</h1>
+        </div>
+        <div item-end>
+            <!-- <ion-icon ios="" style="font-size: 2.1em; color:#ffffff;"></ion-icon>
+                    <ion-icon ios="" style="font-size: 2.3em;font-weight: bolder; color:#ffffff;"></ion-icon> -->
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        </div>
+    </ion-item>
+
+</ion-header>
+
+<ion-content class="" style="background-color:#D0D3D4; ">
+
+    <!-- <div class="otpheader">
+        <ion-icon ios="ios-arrow-round-back" class="otpheadericon"></ion-icon>
+        <label style="padding-left: 31%; font-size: 136%;">Profile</label>
+    </div> -->
+
+    <ion-list>
+        <ion-item>
+            <ion-avatar item-start>
+                <img [src]="imageURL" style="width:60px; height:60px;">
+            </ion-avatar>
+            <h2 style="font-size:2rem;"> {{doctorName}}</h2>
+            <!-- <p>
+                <ion-icon ios="ios-mail-outline" style="font-size: 1.4em; padding-left:5px;"></ion-icon> {{doctorEmail}}
+            </p> -->
+            <div style="display:flex;">
+                <div style="background: url(./assets/images/pet.png) no-repeat scroll; width:16px; height:16px;"> </div>
+                <h6 style="margin: 3px 0px 0px 5px;">Dog(0), Cats(0), Birds(0)</h6>
+            </div>
+        </ion-item>
+    </ion-list>
+
+    <!-- <div class="doctorprofilespacer"></div> -->
+
+    <div class="doctorprofilemainmenu">
+        <div class="doctorprofilelistholder">
+            <ion-list>
+                <label class="heading">Profile</label>
+
+                <ion-item (click)="gotoProfileSettingPage();" no-lines>
+                    <div style="background: url(./assets/images/personal_profile_icon.png) no-repeat scroll; width:24px; height:24px;margin-left:15px;margin-right: 35px;" item-start> </div>
+                    <ion-label item-content>Profile Setting</ion-label>
+                </ion-item>
+                <hr style="height:2px;width:90%">
+                <ion-item (click)="gotoChangePasswordPage();" no-lines>
+                    <div style="background: url(./assets/images/locked.png) no-repeat scroll; width:24px; height:24px;margin-left:15px;margin-right: 35px;" item-start> </div>
+                    <ion-label item-content>Change Password</ion-label>
+                </ion-item>
+                <hr style="height:2px;width:90%">
+                <ion-item (click)="gotoChangeProfileImagePage();" no-lines>
+                    <div style="background: url(./assets/images/profile_image.png) no-repeat scroll; width:24px; height:24px;margin-left:15px;margin-right: 35px;" item-start> </div>
+                    <ion-label item-content>Change Profile Image</ion-label>
+                </ion-item>
+                <hr style="height:2px;width:90%">
+                <ion-item (click)="gotoChangeLocationPage();" no-lines>
+                    <div style="background: url(./assets/images/location_icon.png) no-repeat scroll; width:24px; height:24px;margin-left:15px;margin-right: 35px;" item-start> </div>
+                    <ion-label item-content>Location</ion-label>
+                </ion-item>
+
+            </ion-list>
+
+        </div>
+    </div>
+
+    <!-- <div class="doctorprofilespacer"></div> -->
+
+    <div class="doctorprofilemainmenu">
+        <div class="doctorprofilelistholder">
+            <ion-list>
+                <label class="heading">Others</label>
+                <ion-item (click)="gotoMyPetsPage();" no-lines>
+                    <div style="background: url(./assets/images/pet_small.png) no-repeat scroll; width:24px; height:24px;margin-left:15px;margin-right: 35px;" item-start> </div>
+                    <ion-label item-content>Edit Pet Details</ion-label>
+                </ion-item>
+                <hr style="height:2px;width:90%">
+                <ion-item no-lines (click)="gotoMyNotificationsPage();">
+                    <div style="background: url(./assets/images/bell.png) no-repeat scroll; width:24px; height:24px;margin-left:15px;margin-right: 35px;" item-start> </div>
+                    <ion-label item-content>Notification</ion-label>
+                </ion-item>
+                <hr style="height:2px;width:90%">
+                <!-- <ion-item no-lines>
+                    <div style="background: url(./assets/images/info.png) no-repeat scroll; width:24px; height:24px;margin-left:15px;margin-right: 35px;" item-start> </div>
+                    <ion-label item-content>About and Help</ion-label>
+                </ion-item>
+                <hr style="height:2px;width:90%"> -->
+                <ion-item (click)="logout();" no-lines>
+                    <div style="background: url(./assets/images/circle-with-left-arrow.png) no-repeat scroll; width:24px; height:24px;margin-left:15px;margin-right: 35px;" item-start> </div>
+                    <ion-label item-content>Logout</ion-label>
+                </ion-item>
+                <hr style="height:2px;width:90%">
+
+            </ion-list>
+        </div>
+    </div>
+
+    <!-- <div class="doctorprofilespacer"></div> -->
+
+
+</ion-content>
+
+<ion-footer no-border>
+    <div class="doctorprofilefooter" style="height: 65px;">
+
+        <div class="outer">
+            <div class="inner" (click)="gotoMyInvoicesPage();">
+
+                <div style="background: url(./assets/images/invoice_icon.png) no-repeat scroll; width:32px; height:32px;margin: 0 auto;" item-start> </div>
+                <ion-label class="dptablabel">Invoice</ion-label>
+
+            </div>
+            <div class="inner" (click)="gotoMyPetsPage();">
+
+                <div style="background: url(./assets/images/pet_big.png) no-repeat scroll; width:32px; height:32px;margin: 0 auto;" item-start> </div>
+                <ion-label class="dptablabel">My Pets</ion-label>
+
+            </div>
+            <div class="inner" style="background-color:#7C2020;padding: 12px;">
+
+                <div style="background: url(./assets/images/user_white_big.png) no-repeat scroll; width:32px; height:32px;margin: 0 auto;" item-start> </div>
+                <ion-label class="dptablabel" style="color:#ffffff;">Profile</ion-label>
+
+            </div>
+            <div class="inner" (click)="gotoMyNotificationsPage();">
+                <div class="notificationnumber"><label>2</label></div>
+                <ion-icon ios="ios-notifications-outline" class="dptabicon"></ion-icon>
+                <ion-label class="dptablabel">Notification</ion-label>
+
+            </div>
+        </div>
+    </div>
+</ion-footer>

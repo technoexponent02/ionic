@@ -1,0 +1,46 @@
+<ion-header>
+
+</ion-header>
+
+<ion-content text-center style="background-image: url('./assets/images/splash.png'); background-repeat:no-repeat;background-size:cover; background-position: right;">
+    <div class="homeContainer">
+        <strong><h4 text-center style="font-size: 3rem; padding-top:10%;">Invoice App</h4></strong>
+
+        <h5 text-center style="font-weight:300;">
+            Enter Your Work or Personal Email Address
+        </h5>
+
+        <ion-list>
+
+            <ion-item class="homeCustomInput">
+
+                <div style="background: url(./assets/images/mail.png) no-repeat scroll; width:16px; height:16px;margin-left:15px;" item-start> </div>
+
+                <ion-input type="text" placeholder=" Email Id" class="redtext" [(ngModel)]="email" name="email"></ion-input>
+            </ion-item>
+
+        </ion-list>
+
+        <button ion-button round color="danger" class="roundButton" style="margin-bottom:0px;text-transform:uppercase;" (click)="gotoPasswordPage();">Continue &nbsp;
+            <ion-icon ios="ios-arrow-forward" style="color:#ffffff;"></ion-icon>
+        </button>
+
+        <button ion-button round class="customButtonFacebook" style="border: 2px solid #3b5998;text-transform:uppercase;" (click)="signInUserFacebook();">
+            <ion-icon ios="logo-facebook" style="color:#ffffff;padding-right: 5px;"></ion-icon>
+            Sign In with facebook
+        </button>
+
+        <button ion-button class="customButtonGoogle" style="text-transform:uppercase;" (click)="signInUserGmail();">
+            <ion-icon ios="logo-googleplus" style="color:#ffffff; padding-left:0;padding-right: 10px;"></ion-icon>
+            Sign In with Google
+        </button>
+    </div>
+</ion-content>
+
+<ion-footer no-border>
+    <div class="homepagefooter" (click)="gotoCreatePasswordPage();">
+        <h6 text-center>
+            Need any help ?<strong><a style="color:#C82121"> Contact Support</a></strong>
+        </h6>
+    </div>
+</ion-footer>

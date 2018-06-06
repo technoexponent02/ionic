@@ -1,0 +1,93 @@
+page-dashboard {
+    .doctorprofilecontainer {
+        background-color: #ffffff;
+    }
+    .doctorprofileheader {
+        background-color: #ffffff;
+        height: 12%;
+    }
+    .doctorprofilespacer {
+        height: 2%;
+    }
+    .doctorprofilemainmenu {
+        background-color: #ffffff;
+        // height: 40%;
+    }
+    .doctorprofilemainmenu .heading {
+        font-size: 18px;
+        padding-left: 9%;
+        color: #7C2020;
+    }
+    .doctorprofilefooter {
+        background-color: #ffffff;
+        height: 9%;
+    }
+    // .item-md ion-avatar img {
+    //     height: 60px;
+    //     width: 60px;
+    // }
+    .doctorprofilelistholder {
+        padding-top: 15px;
+    }
+    // .doctorprofilemenubutton {
+    //     width: 100%;
+    //     background: white;
+    //     height: 38px;
+    //     font-size: 19px;
+    //     text-align: left;
+    // }
+    .otpheader {
+        background-color: #7C2020;
+        color: #ffffff;
+        height: 6%;
+    }
+    .otpheadericon {
+        color: #ffffff;
+        font-size: 200%;
+        padding-left: 5%;
+        font-weight: bolder;
+    }
+    .outer {
+        width: 100%;
+        text-align: center;
+        // padding-top: 50px;
+    }
+    .inner {
+        display: inline-block;
+        background-color: #ffffff;
+        width: 24%;
+        height: 65px
+    }
+    .doctorprofileiconbutton {
+        color: black;
+        width: 55px;
+        height: 55px;
+    }
+    .dptabicon {
+        font-size: 3em;
+        padding: 0 0 0 0;
+        color: #7C2020;
+    }
+    .dptablabel {
+        margin: 0 0 0 0 !important;
+        color: #7C2020;
+    }
+    .notificationnumber {
+        height: 20px;
+        width: 20px;
+        padding-top: 2px;
+        padding-left: 2px;
+        background-color: #000000;
+        color: #ffffff;
+        margin-top: 1%;
+        margin-left: 10%;
+        position: absolute;
+        border-radius: 50%;
+    }
+    div .item-inner {
+        margin-left: 0px;
+    }
+    .redicon {
+        color: #7C2020;
+    }
+}
